@@ -18,7 +18,7 @@ const handleRequest = async (
 				},
 			})
 			.promise()
-		if (!Object.keys(lead).length)
+		if (!lead)
 			return res(404, { message: "Lead não encontrada." })
 		return res(200, lead)
 	}
